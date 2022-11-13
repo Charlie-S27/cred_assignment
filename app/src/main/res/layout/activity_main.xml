@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="334dp"
+        android:layout_height="345dp"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113">
+
+        <TextView
+            android:id="@+id/textMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textAlignment="center"
+            android:layout_marginTop="270dp"
+           />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/dragIcon"
+        android:layout_width="78dp"
+        android:layout_height="90dp"
+        android:elevation="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/container"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566"
+        app:srcCompat="@drawable/circle_logo"
+        android:contentDescription="@string/dragicon" />
+
+
+    <ImageView
+        android:id="@+id/container"
+        android:layout_width="89dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952"
+        app:srcCompat="@drawable/blackcircle"
+        android:contentDescription="@string/draghere" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="91dp"
+        android:layout_height="102dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952">
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="@string/success"
+        android:checked="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.598" />
+
+    <com.example.loadinganimation.LoadingAnimation
+        android:id="@+id/loadingAnim"
+        android:layout_width="89dp"
+        android:layout_height="106dp"
+        android:visibility="invisible"
+        app:barType="@drawable/loading2"
+        app:boldText="false"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:enlarge="50"
+        app:textColor="@color/purple_500"
+        app:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="@id/container"
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="504dp" />
+
+    <ImageView
+        android:id="@+id/downArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginEnd="150dp"
+        app:enlarge="5"
+        app:layout_constraintBottom_toTopOf="@id/container"
+        app:layout_constraintRight_toLeftOf="@id/dragIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dragIcon"
+        app:layout_constraintVertical_bias="0.188"
+        app:srcCompat="@android:drawable/arrow_down_float"
+        android:contentDescription="@string/arrowDirection" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

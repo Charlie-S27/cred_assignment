@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cred_DemoApp</string>
+    <string name="todo">TODO</string>
+    <string name="success">Success</string>
+    <string name="arrowDirection">ArrowDirection</string>
+    <string name="dragicon">DragIcon</string>
+    <string name="draghere">DragHere</string>
+</resources>
